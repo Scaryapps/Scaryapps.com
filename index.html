@@ -5,6 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Scary Apps - Free Horror Games & Movies</title>
   <style>
+    img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
     body {
       background-color: #121212;
       color: #eee;
@@ -47,6 +52,8 @@
       padding-bottom: 10px;
     }
     .app-list, .movie-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       display: flex;
       flex-wrap: wrap;
       gap: 20px;
