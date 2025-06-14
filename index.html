@@ -1,118 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Free Movies Platforms - M. Awais</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #121212;
-      color: #eee;
-      margin: 20px;
-      padding: 0;
-    }
-    header {
-      text-align: center;
-      margin-bottom: 40px;
-    }
-    header h1 {
-      font-size: 2.5rem;
-      margin-bottom: 5px;
-    }
-    header p {
-      font-size: 1rem;
-      color: #bbb;
-    }
-    .platforms {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 30px;
-      justify-content: center;
-    }
-    .platform {
-      background: #1f1f1f;
-      border-radius: 10px;
-      padding: 20px;
-      width: 280px;
-      box-shadow: 0 0 10px #000;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    .platform-logo {
-      width: 100px;
-      height: 100px;
-      object-fit: contain;
-      margin-bottom: 15px;
-    }
-    .movie-pic {
-      width: 100%;
-      border-radius: 10px;
-      margin-bottom: 15px;
-      box-shadow: 0 0 10px rgba(255,255,255,0.1);
-    }
-    .platform-name {
-      font-size: 1.3rem;
-      margin-bottom: 10px;
-      font-weight: bold;
-      text-align: center;
-      color: #ffd700;
-    }
-    .movie-title {
-      font-size: 1rem;
-      color: #ccc;
-      margin-bottom: 10px;
-      text-align: center;
-    }
-    footer {
-      text-align: center;
-      margin-top: 60px;
-      font-size: 0.9rem;
-      color: #666;
-    }
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Horror & Latest Movies + Apps</title>
+<style>
+  body {
+    background: #111;
+    color: #eee;
+    font-family: Arial, sans-serif;
+    margin: 0; padding: 0;
+  }
+  h2 {
+    margin-left: 15px;
+  }
+  .big-movies {
+    display: flex;
+    gap: 15px;
+    padding: 15px;
+    overflow-x: auto;
+  }
+  .big-movie {
+    flex: 0 0 auto;
+    width: 300px;
+    height: 450px;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+  }
+  .big-movie img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  /* Apps section */
+  .apps-section {
+    padding: 15px;
+    background: #222;
+  }
+  .app-item {
+    display: flex;
+    align-items: center;
+    background: #333;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    padding: 10px;
+  }
+  .app-logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-right: 15px;
+    flex-shrink: 0;
+  }
+  .app-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+  }
+  .app-info {
+    flex-grow: 1;
+    color: #fff;
+    font-weight: bold;
+  }
+  .download-btn {
+    background: #0f9d58;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .download-btn:hover {
+    background: #0c7a3f;
+  }
+  /* Scrollbar styling for big movies */
+  .big-movies::-webkit-scrollbar {
+    height: 8px;
+  }
+  .big-movies::-webkit-scrollbar-thumb {
+    background: #555;
+    border-radius: 4px;
+  }
+</style>
 </head>
 <body>
 
-<header>
-  <h1>Free Movies Platforms</h1>
-  <p>Curated by M. Awais | Contact: <a href="mailto:awaistigermk4@gmail.com" style="color:#ffd700;">awaistigermk4@gmail.com</a></p>
-</header>
+<h2>Horror Movies</h2>
+<div class="big-movies">
+  <div class="big-movie">
+    <img src="https://m.media-amazon.com/images/I/71YNQEzA+nL._AC_SL1500_.jpg" alt="Horror Movie 1" />
+  </div>
+  <div class="big-movie">
+    <img src="https://upload.wikimedia.org/wikipedia/en/7/70/IT_%282017_film_poster%29.jpg" alt="Horror Movie 2" />
+  </div>
+  <div class="big-movie">
+    <img src="https://upload.wikimedia.org/wikipedia/en/1/19/Hereditary_2018_film_poster.jpg" alt="Horror Movie 3" />
+  </div>
+</div>
 
-<div class="platforms">
+<h2>Latest Movies</h2>
+<div class="big-movies">
+  <div class="big-movie">
+    <img src="https://upload.wikimedia.org/wikipedia/en/2/2e/Black_Panther_poster.jpg" alt="Latest Movie 1" />
+  </div>
+  <div class="big-movie">
+    <img src="https://upload.wikimedia.org/wikipedia/en/9/99/Avengers_Endgame_poster.jpg" alt="Latest Movie 2" />
+  </div>
+  <div class="big-movie">
+    <img src="https://upload.wikimedia.org/wikipedia/en/f/f9/Spider-Man_No_Way_Home_poster.jpg" alt="Latest Movie 3" />
+  </div>
+</div>
 
-  <!-- Platform 1: Netmirror -->
-  <div class="platform">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5a/Netmirrormovies_logo.png" alt="Netmirror Logo" class="platform-logo" />
-    <div class="platform-name">Netmirror</div>
-    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Movie Image" class="movie-pic" />
-    <div class="movie-title">Popular Movie on Netmirror</div>
+<h2>Apps</h2>
+<div class="apps-section">
+
+  <div class="app-item">
+    <div class="app-logo">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Netmirror_logo.svg/1200px-Netmirror_logo.svg.png" alt="Netmirror" />
+    </div>
+    <div class="app-info">Netmirror</div>
+    <a href="https://netmirror.com/download" class="download-btn" target="_blank" rel="noopener noreferrer">Download</a>
   </div>
 
-  <!-- Platform 2: Free Watching Movies -->
-  <div class="platform">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/8/85/Free_Movie_Watching_Logo.png" alt="Free Watching Movies Logo" class="platform-logo" />
-    <div class="platform-name">Free Watching Movies</div>
-    <img src="https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?auto=format&fit=crop&w=400&q=80" alt="Movie Image" class="movie-pic" />
-    <div class="movie-title">Top Movie to Watch Free</div>
+  <div class="app-item">
+    <div class="app-logo">
+      <img src="https://upload.wikimedia.org/wikipedia/en/7/73/TikTok_logo.svg" alt="TikTok Crack" />
+    </div>
+    <div class="app-info">TikTok Crack (9mod.com)</div>
+    <a href="https://9mod.com/tiktok-crack-download" class="download-btn" target="_blank" rel="noopener noreferrer">Download</a>
   </div>
 
-  <!-- Platform 3: Other Free Movie Platform -->
-  <div class="platform">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/IMDb_Logo_2016.svg/2560px-IMDb_Logo_2016.svg.png" alt="Other Platform Logo" class="platform-logo" />
-    <div class="platform-name">IMDb (Free Movies Section)</div>
-    <img src="https://images.unsplash.com/photo-1524985069026-dd778a71c7b4?auto=format&fit=crop&w=400&q=80" alt="Movie Image" class="movie-pic" />
-    <div class="movie-title">IMDb Free Movie Example</div>
+  <div class="app-item">
+    <div class="app-logo">
+      <img src="https://upload.wikimedia.org/wikipedia/en/8/82/Bilibili_Logo_2018.png" alt="Bilibili" />
+    </div>
+    <div class="app-info">Bilibili</div>
+    <a href="https://www.bilibili.com/download" class="download-btn" target="_blank" rel="noopener noreferrer">Download</a>
+  </div>
+
+  <div class="app-item">
+    <div class="app-logo">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/CapCut_logo.png/1200px-CapCut_logo.png" alt="CapCut Pro" />
+    </div>
+    <div class="app-info">CapCut Pro</div>
+    <a href="https://www.capcut.com/download" class="download-btn" target="_blank" rel="noopener noreferrer">Download</a>
   </div>
 
 </div>
-
-<footer>
-  © 2025 M. Awais | Email: <a href="mailto:awaistigermk4@gmail.com" style="color:#888;">awaistigermk4@gmail.com</a>
-</footer>
 
 </body>
 </html>
