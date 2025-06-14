@@ -3,63 +3,213 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ScaryApps</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+  <title>ScaryApps - Free Apps & Horror Movies</title>
   <style>
-    body { font-family: 'Roboto', sans-serif; margin: 0; background: #111; color: #eee; }
-    header { background: #000; padding: 20px; text-align: center; }
-    header img { height: 80px; }
-    h1 { font-size: 2em; margin: 10px 0; }
-    .apps { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; padding: 20px; }
-    .app { background: #1a1a1a; padding: 15px; border-radius: 10px; text-align: center; }
-    .app img { width: 100px; height: 100px; object-fit: cover; }
-    .app a { color: #0af; text-decoration: none; display: block; margin-top: 10px; }
-    footer { text-align: center; padding: 20px; background: #000; color: #777; }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #0d0d0d;
+      color: #fff;
+    }
+    header {
+      background: #1a1a1a;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      background: #111;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 10px;
+      flex-wrap: wrap;
+    }
+    nav a {
+      color: #00ffcc;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .container {
+      padding: 20px;
+    }
+    .section {
+      margin-bottom: 40px;
+    }
+    .items-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .item {
+      background: #1a1a1a;
+      border-left: 5px solid #ff4c4c;
+      padding: 15px;
+      width: calc(33% - 20px);
+      box-sizing: border-box;
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .item img {
+      width: 120px;
+      height: 120px;
+      border-radius: 12px;
+      object-fit: cover;
+      margin-bottom: 10px;
+    }
+    .item-content {
+      flex: none;
+    }
+    .download-btn {
+      display: inline-block;
+      margin-top: 10px;
+      background: #00ffcc;
+      color: #000;
+      padding: 8px 16px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .search-box {
+      margin: 20px auto;
+      text-align: center;
+    }
+    .search-box input {
+      padding: 10px;
+      width: 80%;
+      max-width: 400px;
+      border-radius: 5px;
+      border: none;
+    }
+    .blog, .contact {
+      background: #1a1a1a;
+      padding: 15px;
+      border-radius: 8px;
+    }
+    .contact input, .contact textarea {
+      width: 100%;
+      margin: 10px 0;
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+    }
+    .contact button {
+      background: #ff4c4c;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+    @media (max-width: 900px) {
+      .item {
+        width: calc(50% - 20px);
+      }
+    }
+    @media (max-width: 600px) {
+      .item {
+        width: 100%;
+        flex-direction: row;
+        text-align: left;
+        align-items: center;
+      }
+      .item img {
+        margin-right: 15px;
+        margin-bottom: 0;
+      }
+    }
   </style>
 </head>
 <body>
   <header>
-    <img src="logo.png" alt="ScaryApps Logo">
     <h1>ScaryApps.com</h1>
-    <p>Free Apps • Games • Entertainment</p>
+    <p>Free Apps & Horror Movies for Everyone!</p>
   </header>
 
-  <section class="apps">
-    <div class="app">
-      <img src="https://play-lh.googleusercontent.com/YlzKwzPOTR89x0EOQBaNBBu-A0KZuHvRWbnEexXPJkM4EBAQMe9bdtCrDCb10ySLvQ=s180" alt="TikTok">
-      <h3>TikTok</h3>
-      <a href="https://play.google.com/store/apps/details?id=com.zhiliaoapp.musically" target="_blank">Download</a>
-    </div>
-    <div class="app">
-      <img src="https://play-lh.googleusercontent.com/DkIdblYYN8zgjM9ln-uU91usKEnChfMfT4I1lQj6rJCKrhyONURiOBF-YdJDb7uDA9s=s180" alt="Netflix">
-      <h3>Netflix</h3>
-      <a href="https://play.google.com/store/apps/details?id=com.netflix.mediaclient" target="_blank">Download</a>
-    </div>
-    <div class="app">
-      <img src="https://play-lh.googleusercontent.com/ZbDrnqIxeglmBA4N6Y1mPMioXznkGAFNUOkIfVwcohJYe2CP_GDb_z_3I9_dPY4E_0k=s180" alt="Bilibili">
-      <h3>Bilibili</h3>
-      <a href="https://play.google.com/store/apps/details?id=com.bilibili.app.in" target="_blank">Download</a>
-    </div>
-    <div class="app">
-      <img src="https://play-lh.googleusercontent.com/gG7UNAgLoRRLh77liAOYmhq8ENBvEdBEG6_-JAlLsFqRxlBbf_IvN3rcsCUBI3IRww=s180" alt="Temu">
-      <h3>Temu</h3>
-      <a href="https://play.google.com/store/apps/details?id=com.einnovation.temu" target="_blank">Download</a>
-    </div>
-    <div class="app">
-      <img src="https://play-lh.googleusercontent.com/1q3nADZcDNjlP5t60C_ebFcVG9c3OEn9oDmhFSNvc1SD7bUGvXzrdn5b3qJlvZ0qVzU=s180" alt="Idle Miner">
-      <h3>Idle Miner</h3>
-      <a href="https://play.google.com/store/apps/details?id=com.fluffyfairygames.idleminer" target="_blank">Download</a>
-    </div>
-    <div class="app">
-      <img src="https://play-lh.googleusercontent.com/J2UuKnyv39vfU4zHbLchbt6q7nGvYkXpqww52pk8zcbMIr1mM8YOV3BXYAvH6MzVgQ=s180" alt="PUBG">
-      <h3>PUBG</h3>
-      <a href="https://play.google.com/store/apps/details?id=com.tencent.ig" target="_blank">Download</a>
-    </div>
-  </section>
+  <nav>
+    <a href="#apps">Apps</a>
+    <a href="#movies">Movies</a>
+    <a href="#horror">Horror</a>
+    <a href="#blog">Blog</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-  <footer>
-    <p>Subscribe on YouTube: <a href="https://youtube.com/@scarygamingpower" target="_blank">@scarygamingpower</a></p>
-    <p>&copy; 2025 scaryapps.com</p>
-  </footer>
+  <div class="search-box">
+    <input type="text" placeholder="Search apps or movies..." />
+  </div>
+
+  <div class="container">
+    <div id="apps" class="section">
+      <h2>📱 Top Free Apps</h2>
+      <div class="items-row">
+        <div class="item">
+          <img src="pubg.jpg" alt="PUBG MOD" />
+          <div class="item-content">
+            <strong>PUBG Mobile MOD APK</strong><br />
+            Unlimited UC + Wall Hack<br />
+            <a class="download-btn" href="#">Download Now</a>
+          </div>
+        </div>
+        <div class="item">
+          <img src="snapchat.jpg" alt="Snapchat" />
+          <div class="item-content">
+            <strong>Snapchat Ghost Mode</strong><br />
+            Hide Online Status<br />
+            <a class="download-btn" href="#">Download Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="movies" class="section">
+      <h2>🎬 Best Free HD Movies</h2>
+      <div class="items-row">
+        <div class="item">
+          <img src="avengers.jpg" alt="Avengers" />
+          <div class="item-content">
+            <strong>Avengers: Endgame (2019)</strong><br />
+            <a class="download-btn" href="#">Watch Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="horror" class="section">
+      <h2>👻 Horror Movies Zone</h2>
+      <div class="items-row">
+        <div class="item">
+          <img src="conjuring.jpg" alt="Conjuring" />
+          <div class="item-content">
+            <strong>The Conjuring (2013)</strong><br />
+            Based on true events<br />
+            <a class="download-btn" href="#">Watch Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="blog" class="section blog">
+      <h2>📰 Latest Blog</h2>
+      <p>Stay updated with the latest app mods, horror movie reviews, and tech tips!</p>
+      <p><strong>Best MOD Apps in 2025:</strong> See which apps are trending now...</p>
+    </div>
+
+    <div id="contact" class="section contact">
+      <h2>📞 Contact Us</h2>
+      <form>
+        <input type="text" placeholder="Your Name" />
+        <input type="email" placeholder="Your Email" />
+        <textarea placeholder="Your Message"></textarea>
+        <button type="submit">Send</button>
+      </form>
+      <p>
+        Or chat with us on <a href="https://wa.me/923001234567" style="color:#00ffcc"
+          >WhatsApp</a
+        >
+      </p>
+    </div>
+  </div>
 </body>
 </html>
