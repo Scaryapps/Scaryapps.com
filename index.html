@@ -1,157 +1,108 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Horror & Latest Movies + Apps</title>
-<style>
-  body {
-    background: #111;
-    color: #eee;
-    font-family: Arial, sans-serif;
-    margin: 0; padding: 0;
-  }
-  h2 {
-    margin-left: 15px;
-  }
-  .big-movies {
-    display: flex;
-    gap: 15px;
-    padding: 15px;
-    overflow-x: auto;
-  }
-  .big-movie {
-    flex: 0 0 auto;
-    width: 300px;
-    height: 450px;
-    border-radius: 8px;
-    overflow: hidden;
-    position: relative;
-  }
-  .big-movie img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-  }
-  /* Apps section */
-  .apps-section {
-    padding: 15px;
-    background: #222;
-  }
-  .app-item {
-    display: flex;
-    align-items: center;
-    background: #333;
-    margin-bottom: 12px;
-    border-radius: 8px;
-    padding: 10px;
-  }
-  .app-logo {
-    width: 60px;
-    height: 60px;
-    border-radius: 10px;
-    overflow: hidden;
-    margin-right: 15px;
-    flex-shrink: 0;
-  }
-  .app-logo img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    display: block;
-  }
-  .app-info {
-    flex-grow: 1;
-    color: #fff;
-    font-weight: bold;
-  }
-  .download-btn {
-    background: #0f9d58;
-    color: white;
-    border: none;
-    padding: 8px 14px;
-    border-radius: 6px;
-    cursor: pointer;
-    font-weight: 600;
-    text-decoration: none;
-  }
-  .download-btn:hover {
-    background: #0c7a3f;
-  }
-  /* Scrollbar styling for big movies */
-  .big-movies::-webkit-scrollbar {
-    height: 8px;
-  }
-  .big-movies::-webkit-scrollbar-thumb {
-    background: #555;
-    border-radius: 4px;
-  }
-</style>
+    <meta charset="UTF-8">
+    <title>ScaryApps - Horror Movies & Apps</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: white;
+        }
+        .header {
+            text-align: center;
+            padding: 20px;
+            background-color: #111;
+        }
+        .movies {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+            gap: 20px;
+        }
+        .movie {
+            max-width: 300px;
+        }
+        .movie img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .apps-section {
+            background-color: #111;
+            padding: 30px 20px;
+        }
+        .apps-title {
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .apps {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .app {
+            background-color: #222;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            width: 180px;
+        }
+        .app img {
+            width: 80px;
+            height: 80px;
+        }
+        .download-btn {
+            margin-top: 10px;
+            display: inline-block;
+            padding: 8px 15px;
+            background-color: crimson;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .download-btn:hover {
+            background-color: darkred;
+        }
+    </style>
 </head>
 <body>
 
-<h2>Horror Movies</h2>
-<div class="big-movies">
-  <div class="big-movie">
-    <img src="https://m.media-amazon.com/images/I/71YNQEzA+nL._AC_SL1500_.jpg" alt="Horror Movie 1" />
-  </div>
-  <div class="big-movie">
-    <img src="https://upload.wikimedia.org/wikipedia/en/7/70/IT_%282017_film_poster%29.jpg" alt="Horror Movie 2" />
-  </div>
-  <div class="big-movie">
-    <img src="https://upload.wikimedia.org/wikipedia/en/1/19/Hereditary_2018_film_poster.jpg" alt="Horror Movie 3" />
-  </div>
+<div class="header">
+    <h1>ScaryApps.com</h1>
+    <p>Horror Movies & Cracked Apps</p>
 </div>
 
-<h2>Latest Movies</h2>
-<div class="big-movies">
-  <div class="big-movie">
-    <img src="https://upload.wikimedia.org/wikipedia/en/2/2e/Black_Panther_poster.jpg" alt="Latest Movie 1" />
-  </div>
-  <div class="big-movie">
-    <img src="https://upload.wikimedia.org/wikipedia/en/9/99/Avengers_Endgame_poster.jpg" alt="Latest Movie 2" />
-  </div>
-  <div class="big-movie">
-    <img src="https://upload.wikimedia.org/wikipedia/en/f/f9/Spider-Man_No_Way_Home_poster.jpg" alt="Latest Movie 3" />
-  </div>
+<div class="movies">
+    <div class="movie"><img src="movie1.jpg" alt="Horror Movie 1"></div>
+    <div class="movie"><img src="movie2.jpg" alt="Horror Movie 2"></div>
+    <div class="movie"><img src="movie3.jpg" alt="Horror Movie 3"></div>
 </div>
 
-<h2>Apps</h2>
 <div class="apps-section">
-
-  <div class="app-item">
-    <div class="app-logo">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Netmirror_logo.svg/1200px-Netmirror_logo.svg.png" alt="Netmirror" />
+    <div class="apps-title">Download Apps</div>
+    <div class="apps">
+        <div class="app">
+            <img src="netmirror.png" alt="NetMirror"><br>
+            <a href="https://example.com/netmirror.apk" class="download-btn">Download</a>
+        </div>
+        <div class="app">
+            <img src="tiktok.png" alt="TikTok Mod"><br>
+            <a href="https://9mod.com/tiktok" class="download-btn">Download</a>
+        </div>
+        <div class="app">
+            <img src="bilibili.png" alt="Bilibili"><br>
+            <a href="https://example.com/bilibili.apk" class="download-btn">Download</a>
+        </div>
+        <div class="app">
+            <img src="capcut.png" alt="CapCut Pro"><br>
+            <a href="https://example.com/capcutpro.apk" class="download-btn">Download</a>
+        </div>
     </div>
-    <div class="app-info">Netmirror</div>
-    <a href="https://netmirror.com/download" class="download-btn" target="_blank" rel="noopener noreferrer">Download</a>
-  </div>
-
-  <div class="app-item">
-    <div class="app-logo">
-      <img src="https://upload.wikimedia.org/wikipedia/en/7/73/TikTok_logo.svg" alt="TikTok Crack" />
-    </div>
-    <div class="app-info">TikTok Crack (9mod.com)</div>
-    <a href="https://9mod.com/tiktok-crack-download" class="download-btn" target="_blank" rel="noopener noreferrer">Download</a>
-  </div>
-
-  <div class="app-item">
-    <div class="app-logo">
-      <img src="https://upload.wikimedia.org/wikipedia/en/8/82/Bilibili_Logo_2018.png" alt="Bilibili" />
-    </div>
-    <div class="app-info">Bilibili</div>
-    <a href="https://www.bilibili.com/download" class="download-btn" target="_blank" rel="noopener noreferrer">Download</a>
-  </div>
-
-  <div class="app-item">
-    <div class="app-logo">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/CapCut_logo.png/1200px-CapCut_logo.png" alt="CapCut Pro" />
-    </div>
-    <div class="app-info">CapCut Pro</div>
-    <a href="https://www.capcut.com/download" class="download-btn" target="_blank" rel="noopener noreferrer">Download</a>
-  </div>
-
 </div>
 
 </body>
